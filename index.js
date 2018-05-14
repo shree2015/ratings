@@ -7,24 +7,31 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var timeout = require('connect-timeout');
 
 var app = express();
 
 var port = process.env.PORT || 8888;
 
+app.use(timeout(5000));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(halt);
 app.use(bodyParser.json());
+app.use(halt);
 
-
-// Set up routes 
+// Vehicle routes 
 vehicleRouter = require('./routes/vehicleRoutes')();
 app.use('/vehicles', vehicleRouter);
-
 
 // Base route
 baseRouter = require('./routes/baseRoutes')();
 app.use('/', baseRouter);
 
 app.listen(port, function() {
-   console.log('Server started by gulp on port ' + port); 
+   console.log('Server started on port ' + port); 
 });
+
+function halt(request, response, next) {
+    if (!request.timedout) next();
+}
+

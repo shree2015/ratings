@@ -29,6 +29,7 @@ var routes = function() {
 var sendBaseResponseString = function(request, response) {
     var responseString = "This is the base API for fetching vehicle details . \n\
     Please provide <MODEL YEAR>, <MANUFACTURER>, and <MODEL> parameters in your query";
+    response.status(200);
     response.end(responseString);    
 };
 

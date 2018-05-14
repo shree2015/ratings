@@ -13,8 +13,9 @@ var routes = function() {
 
     baseRouter.route('/')    
     .get(function(request, response) {
-        var responseJson = "Welcome to the Vehicle Ratings API. Please use /vehicles in your HTTP requests";
-        response.end(responseJson);
+        var responseString = "Welcome to the Vehicle Ratings API. Please use /vehicles in your HTTP requests";
+        response.status(200);
+        response.end(responseString);
     });
    
     return baseRouter;

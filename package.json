@@ -4,15 +4,21 @@
   "description": "API Endpoints to get Vehicle ratings from NHTSA",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",    
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "mocha"
   },
   "author": "Ojas Kale",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "connect-timeout": "^1.9.0",
     "express": "^4.16.3",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1",
+    "should": "^13.2.1",
+    "supertest": "^3.1.0"
   }
 }
