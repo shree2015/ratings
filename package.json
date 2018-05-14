@@ -1,0 +1,18 @@
+{
+  "name": "vehicleratingsapi",
+  "version": "1.0.0",
+  "description": "API Endpoints to get Vehicle ratings from NHTSA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ojas Kale",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
