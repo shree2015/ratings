@@ -4,14 +4,13 @@ This is the deliverable for a Mini-Exercise given by Modus Create in order to te
 # Application Details 
 * Node version used : (Current LTS) : 8.11.1
 * npm version used : 5.6.0
-
-npm packages used : 
+* npm packages used : 
     1. express
     2. body-parser
     3. connect-timeout
     4. gulp
     5. gulp-nodemon
-npm packages used for testing : 
+* npm packages used for testing : 
     1. mocha
     2. should
     3. supertest
